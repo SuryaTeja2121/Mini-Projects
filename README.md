@@ -1,3 +1,3 @@
 # Amrita-School-of-Engineering
 
-## This Repository contains all my projects of each and every semester. 
+## This Repository contains all my projects of every semester. 
