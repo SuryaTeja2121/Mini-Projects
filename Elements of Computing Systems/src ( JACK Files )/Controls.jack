@@ -1,0 +1,94 @@
+class Controls {
+
+  field Up t;
+
+  field Up s;
+   constructor Controls new() {
+  
+let t = Up.new(336,94);
+
+  do t.UpArrow();
+
+   let s = Up.new(336 ,151);
+
+  do s.DownArrow(); 
+
+  do Screen.setColor(true);
+
+  do Screen.drawRectangle( 253, 0 , 256 , 195 );  
+
+  do Output.moveCursor( 3, 5 );
+
+  do Output.printString(" Left Player Controls  " );
+
+  do Screen.setColor( true);
+
+  do Screen.drawRectangle( 45 , 52 , 210 , 53);
+
+  do Output.moveCursor( 3, 36);
+
+  do Output.printString(" Right Player Controls " );
+
+  do Screen.setColor( true);
+
+  do Screen.drawRectangle( 292 , 52 , 469 , 53);
+
+  do Output.moveCursor(9 , 3);
+
+  do Output.printString("PRESS   W   TO  MOVE    UP");
+
+  do Output.moveCursor(14 , 3);
+
+  do Output.printString("PRESS   S   TO  MOVE   DOWN");
+
+  do Output.moveCursor(9 , 36);
+
+  do Output.printString("PRESS ");
+
+  do Output.moveCursor(9 , 45);
+
+  do Output.printString(" TO  MOVE   UP");
+
+  do Output.moveCursor(14 , 36);
+
+  do Output.printString("PRESS");
+
+  do Output.moveCursor(14, 45);
+
+  do Output.printString(" TO  MOVE  DOWN");
+
+  do Output.moveCursor( 19 , 18);
+
+  do Output.printString("  BackSpace -  Game Over....  ");
+
+  do Output.moveCursor( 21 , 14);
+
+  do Output.printString(" ( Backspace - Go back to Main Menu )");
+
+  do Screen.setColor(true);
+
+  do Screen.drawRectangle( 0 , 0 ,4, 255);
+
+  do Screen.setColor(true);
+
+  do Screen.drawRectangle(  0, 0 , 511, 4 );
+
+  do Screen.setColor(true);
+
+  do Screen.drawRectangle( 507 , 0 , 511, 255);
+
+  do Screen.setColor(true);
+
+  do Screen.drawRectangle(  0, 251 , 511, 255 );
+
+  do Screen.setColor(true);
+
+  do Screen.drawRectangle( 0 , 195 , 511 , 198);
+
+     return this;
+}
+method void dispose()
+{   do Memory.deAlloc(this);
+    return;
+}
+}

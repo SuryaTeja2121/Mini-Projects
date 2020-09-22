@@ -1,0 +1,60 @@
+class Up {
+
+ field int x, y;
+ 
+  constructor Up new(int a , int b){
+   let x =a;
+   let y=b;
+   return this;
+}
+
+method void dispose() {
+   do Memory.deAlloc(this);
+        return;
+    }
+
+method void UpArrow() {
+                   var int memAddress;
+	let memAddress = 16384+(x/16) + (y*32);
+	do Memory.poke(memAddress+0, 128);
+	do Memory.poke(memAddress+32, 448);
+	do Memory.poke(memAddress+64, 672);
+	do Memory.poke(memAddress+96, 1168);
+	do Memory.poke(memAddress+128, 2184);
+	do Memory.poke(memAddress+160, 4228);
+	do Memory.poke(memAddress+192, 8322);
+	do Memory.poke(memAddress+224, 128);
+	do Memory.poke(memAddress+256, 128);
+	do Memory.poke(memAddress+288, 128);
+	do Memory.poke(memAddress+320, 128);
+	do Memory.poke(memAddress+352, 128);
+	do Memory.poke(memAddress+384, 128);
+	do Memory.poke(memAddress+416, 128);
+	do Memory.poke(memAddress+448, 128);
+	do Memory.poke(memAddress+480, 128);
+	return;
+}
+
+method void DownArrow() {
+                   var int memAddress;
+	let memAddress = 16384+(x/16) + (y*32);
+	do Memory.poke(memAddress+0, 128);
+	do Memory.poke(memAddress+32, 128);
+	do Memory.poke(memAddress+64, 128);
+	do Memory.poke(memAddress+96, 128);
+	do Memory.poke(memAddress+128, 128);
+	do Memory.poke(memAddress+160, 128);
+	do Memory.poke(memAddress+192, 128);
+	do Memory.poke(memAddress+224, 128);
+	do Memory.poke(memAddress+256, 16513);
+	do Memory.poke(memAddress+288, 8322);
+	do Memory.poke(memAddress+320, 4228);
+	do Memory.poke(memAddress+352, 2184);
+	do Memory.poke(memAddress+384, 1168);
+	do Memory.poke(memAddress+416, 672);
+	do Memory.poke(memAddress+448, 448);
+	do Memory.poke(memAddress+480, 128);
+	return;
+}
+}
+

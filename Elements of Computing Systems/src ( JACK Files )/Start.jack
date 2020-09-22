@@ -1,0 +1,79 @@
+class Start {
+
+
+     field Sprite t;
+
+     field Sprite s;
+
+     field char key1, key2;      
+
+constructor Start new() {
+
+     let key1 = 62; 
+ 
+     let key2 = 45;
+
+     let t =Sprite.new(145, 87);
+
+     do t.Smiley1();
+
+     let s =Sprite.new( 360, 87);
+
+     do s.Smiley2();
+
+     do Screen.setColor(true);
+
+     do Screen.drawRectangle( 0 , 0 ,4, 255);
+
+     do Screen.setColor(true);
+
+     do Screen.drawRectangle(  0, 0 , 511, 4 );
+
+     do Screen.setColor(true);
+
+     do Screen.drawRectangle( 507 , 0 , 511, 255);
+
+     do Screen.setColor(true);
+
+     do Screen.drawRectangle(  0, 251 , 511, 255 );
+
+     do Output.moveCursor(16, 16);
+   
+     do Output.printChar(key2);
+    
+     do Output.moveCursor(16 , 17);
+
+     do Output.printChar(key1);
+
+     do Output.moveCursor(12 , 16);
+   
+     do Output.printChar(key2);
+    
+     do Output.moveCursor(12 , 17);
+
+     do Output.printChar(key1);
+
+     do Output.moveCursor(16 , 20);
+
+     do Output.printString("Controls    -  Press   X ");
+
+     do Output.moveCursor(12 , 19) ;
+
+     do Output.printString(" Start Game  -  Press Space");
+
+     do Output.moveCursor(8 , 21) ;
+
+     do Output.printString("  The Ping Pong Game  " );
+
+     do Screen.setColor( true);
+
+     do Screen.drawRectangle( 175 , 104 , 332 , 105);
+
+	return  this;   
+}
+method void dispose()
+{  do Memory.deAlloc(this);
+   return;
+}
+
+} 

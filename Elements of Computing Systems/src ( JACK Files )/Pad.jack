@@ -1,0 +1,76 @@
+class Pad {
+      
+	  field int x,y;
+      field int width, height;
+      field int direction;
+   constructor Pad new(int Ax,int  Ay,int  w,int  h){
+     let  x=Ax;
+      let  y=Ay;
+      let width=w;
+      let height=h;
+      let direction=2;
+      do show();
+       return this;
+}
+
+method void dispose(){
+     do Memory.deAlloc(this);
+        return;
+}
+method void show(){
+      do Screen.setColor(true);
+      do Screen.drawRectangle(x,y,x+width,y+height);      
+      return;
+}
+
+method void hide(){
+     do Screen.setColor(false);
+      do Screen.drawRectangle(x,y,x+width,y+height);      
+     return;         
+}  
+ method void setDirection(int Adirection) {
+        let direction = Adirection;
+        return;
+}
+method int getLeft() {
+        return x;
+    }
+	
+	method int getTop() {
+        return y;
+    }
+	method int getBottom() {
+        return (y+height);
+    }
+	method void setWidth(int l){
+	do hide();
+	let height=l;
+	do show();
+	return;
+	}
+	method int getWidth()
+	{   return width;}
+   
+    method int getRight() {
+        return (x+width);
+    }
+  method void move(){
+      if(direction=2){
+         let  y = y + 4;
+           if((y+height)>255){ let y=255-height;}
+         do Screen.setColor(false);
+         do Screen.drawRectangle(x,y - 4,(x + width),(y+height) - 4 );
+         do Screen.setColor(true); 
+         do Screen.drawRectangle(x,y,x+width,y+height);
+}
+else{
+      let  y = y - 4;
+         if(y<42){ let y=43;}
+     do Screen.setColor(false);
+     do Screen.drawRectangle(x,y + 4,(x + width),(y+height) + 4 );
+     do Screen.setColor(true);
+     do Screen.drawRectangle(x,y,x+width,y+height);
+    } 
+     return;
+}
+}

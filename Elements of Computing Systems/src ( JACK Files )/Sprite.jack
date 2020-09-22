@@ -1,0 +1,61 @@
+class Sprite {
+
+ field int x, y;
+ 
+  constructor Sprite new(int a , int b){
+   let x =a;
+   let y=b;
+   return this;
+}
+
+method void dispose() {
+   do Memory.deAlloc(this);
+        return;
+    }
+
+method void Smiley1() {
+              var int memAddress;
+	let memAddress = 16384+ (x/16)+ (y*32);
+	do Memory.poke(memAddress+0, 960);
+	do Memory.poke(memAddress+32, 1056);
+	do Memory.poke(memAddress+64, 2064);
+	do Memory.poke(memAddress+96, 4104);
+	do Memory.poke(memAddress+128, 8772);
+	do Memory.poke(memAddress+160, 16386);
+	do Memory.poke(memAddress+192, -32767);
+	do Memory.poke(memAddress+224, -28663);
+	do Memory.poke(memAddress+256, -28663);
+	do Memory.poke(memAddress+288, -30703);
+	do Memory.poke(memAddress+320, 17442);
+	do Memory.poke(memAddress+352, 9156);
+	do Memory.poke(memAddress+384, 4104);
+	do Memory.poke(memAddress+416, 2064);
+	do Memory.poke(memAddress+448, 1056);
+	do Memory.poke(memAddress+480, 960);
+
+                 return;
+}
+
+method void Smiley2() {
+                   var int memAddress;
+	let memAddress = 16384+(x/16)+ (y*32);
+	do Memory.poke(memAddress+0, 960);
+	do Memory.poke(memAddress+32, 1056);
+	do Memory.poke(memAddress+64, 2064);
+	do Memory.poke(memAddress+96, 4104);
+	do Memory.poke(memAddress+128, 8772);
+	do Memory.poke(memAddress+160, 16386);
+	do Memory.poke(memAddress+192, -32767);
+	do Memory.poke(memAddress+224, -28663);
+	do Memory.poke(memAddress+256, -28663);
+	do Memory.poke(memAddress+288, -30703);
+	do Memory.poke(memAddress+320, 17442);
+	do Memory.poke(memAddress+352, 9156);
+	do Memory.poke(memAddress+384, 4104);
+	do Memory.poke(memAddress+416, 2064);
+	do Memory.poke(memAddress+448, 1056);
+	do Memory.poke(memAddress+480, 960);
+	return;
+}
+}
+

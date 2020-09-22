@@ -1,0 +1,37 @@
+class Main
+{
+function void main()
+{  var Game game;
+   var Start s;
+   var Start l;
+   var char k;
+   var boolean st;
+   var Controls c;
+    let st=true;
+    let s= Start.new();
+  while (st)
+   {let k=Keyboard.keyPressed();
+    
+	if(k=129)
+	  {   do Screen.clearScreen(); 
+do s.dispose();          
+let s=Start.new();  	  
+	}
+	if(k=88)
+     {      
+       do Screen.clearScreen(); 
+      let c= Controls.new();}
+   else    
+   	{if(k=32)	 
+   {do Screen.clearScreen(); 
+   do game.newInstance();
+   let game=Game.getInstance();
+   do game.run();
+   do game.dispose();}
+  }}
+do s.dispose();
+do  l.dispose();
+do  c.dispose();
+   return;
+}
+}
