@@ -1,1 +1,0 @@
-### Geospatial AI in Drones
